@@ -11,13 +11,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3
         uses: actions/setup-python@v2
         with:
           python-version: 3.7.9
+          architecture: x64
       - name: Adds Linux dependencies
         run: |
           DEBIAN_FRONTEND=noninteractive apt-get install xsltproc

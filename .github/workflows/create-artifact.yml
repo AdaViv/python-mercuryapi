@@ -21,7 +21,7 @@ jobs:
           architecture: x64
       - name: Adds Linux dependencies
         run: |
-          DEBIAN_FRONTEND=noninteractive apt-get install xsltproc
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install xsltproc
       - name: Build and package Python package
         run: |
           python setup.py sdist

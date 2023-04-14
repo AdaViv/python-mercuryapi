@@ -24,7 +24,7 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install xsltproc
       - name: Build and package Python package
         run: |
-          python setup.py sdist
+          python setup.py build sdist
           mv dist/*.tar.gz mercury_api_linux-${{github.ref_name}}.tar.gz
       - name: Release package to repository
         uses: softprops/action-gh-release@v1
